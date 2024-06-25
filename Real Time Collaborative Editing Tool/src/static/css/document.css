@@ -1,0 +1,147 @@
+body {
+  background-image: none !important;
+  background-color: black !important;
+  overflow-y: hidden;
+}
+.main-container {
+  height: 90vh;
+}
+
+.terminal {
+  height: 45vh;
+  background-color: #101010;
+  font-family: "monaco", consolas, monospace;
+  padding: 0.5rem;
+  cursor: text;
+}
+
+#terminal-output {
+  background: #f0f8ff00;
+  color: white;
+  border: none;
+  width: 100%;
+  resize: none;
+}
+
+#terminal--cursor {
+  display: block;
+  height: 17px;
+  width: 8px;
+  margin-left: 9px;
+  animation: blink 1200ms linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    background: #ffffff;
+  }
+  49% {
+    background: #ffffff;
+  }
+  60% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
+
+#splitter {
+  cursor: row-resize;
+  background-color: #b8b8b8;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='30'><path d='M2 0 v30 M5 0 v30 M8 0 v30' fill='none' stroke='white'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 4px;
+  width: 100%;
+  margin: 0.8rem 0;
+
+  /* Prevent the browser's built-in drag from interfering */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gutter:hover {
+  background-color: aliceblue;
+}
+.gutter {
+  display: flex;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  height: 3px;
+  background-image: url("/img/horizontal.png");
+  transition: background-color 0.2s ease 0s;
+}
+.split {
+  background-color: white;
+  border-radius: var(3px);
+  height: 2px;
+  width: 25px;
+  transition: background-color 0.1s ease 0s;
+}
+
+.gutter:hover {
+  cursor: n-resize;
+}
+
+#textarea {
+  font: "Fira Code";
+}
+
+#textarea .CodeMirror {
+  background-color: #101010 !important;
+  font-family: "Fira Code";
+  width: 100%;
+  height: 100%;
+}
+#textarea .CodeMirror-linenumber {
+  color: aliceblue;
+}
+#textarea .CodeMirror-gutter {
+  background-color: #101010;
+  margin-right: 0.3;
+  border-right: 0.1px solid #ffffff4d;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

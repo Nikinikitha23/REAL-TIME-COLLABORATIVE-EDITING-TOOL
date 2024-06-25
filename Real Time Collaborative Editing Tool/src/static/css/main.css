@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: clip;
+  -webkit-overflow-scrolling: auto;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  /* background-image: linear-gradient(
+    to bottom,
+    rgb(1, 29, 32),
+    rgb(0, 0, 0)
+  ) !important; */
+  background: rgb(0, 0, 0) !important;
+}
+nav {
+  width: 100%;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+nav,
+.dropdown-menu {
+  background-color: #000000cc !important;
+  z-index: 1;
+  box-shadow: rgb(220, 220, 220) 0px 2px 10px;
+}
+
+.dropdown-menu {
+  min-width: auto !important;
+}
+
+.dropdown-item {
+  width: max-content;
+  color: white !important;
+}
+.dropdown-item:hover {
+  color: black !important;
+}
+
+.bg-b-roll {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-size: contain;
+  background-position: center;
+}
+
+.bg-black {
+  background-color: #000000cc;
+}
+
+.getting-started {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.getting-started-btn:hover {
+  color: black !important;
+}
+
+.jumbotron {
+  /* height: 25rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid rgba(255, 255, 255, 0.514); */
+  /* background-color: rgba(0, 17, 17, 0.7);
+  */
+  height: auto;
+}
+
+.jumbotron-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron img {
+  width: 80%;
+  max-width: 500px;
+}
+
+.jumbotron-heading {
+  color: white;
+  text-shadow: 2px 8px 40px white;
+  font-weight: 600 !important;
+}
+
+.typewriter {
+  border-right: solid 3px green;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+}
+.typewriter:hover {
+  color: black;
+}
+
+/* Animation */
+.typewriter {
+  animation: animated-text 3s steps(29, end) 1s 1 normal both,
+    animated-cursor 600ms steps(29, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18rem;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: green;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+footer {
+  margin-top: auto;
+  background: #000000cc;
+  box-shadow: rgb(220, 220, 220) 0px -2px 10px;
+  /* margin-bottom: 0 !important; */
+  z-index: 10;
+}
+
+.heading {
+  margin-bottom: 1rem;
+  text-shadow: 2px 8px 40px white;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  z-index: -1;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.589);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf00;
+}
+
+/* Awein for line numbers */
+
+.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #ccc;
+  border-right: 1px solid #ccc;
+  vertical-align: top;
+  padding-right: 5px;
+
+  /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+  padding-left: 10px;
+}
+
+.lang-btns {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: rgb(30, 30, 30, 0);
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+  border-radius: 10px;
+  color: white;
+  margin: 10px 10px;
+}
+.pngz {
+  background: inherit;
+  border-radius: inherit;
+  /* box-shadow: 3px  3px 10px white; */
+}
